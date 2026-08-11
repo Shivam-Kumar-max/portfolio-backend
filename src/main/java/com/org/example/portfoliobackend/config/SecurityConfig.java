@@ -2,7 +2,7 @@ package com.org.example.portfoliobackend.config;
 
 import com.org.example.portfoliobackend.security.CustomUserDetailsService;
 import com.org.example.portfoliobackend.security.JwtAuthFilter;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -25,7 +25,7 @@ import java.util.List;
 
 @Configuration
 @EnableWebSecurity
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class SecurityConfig {
 
     private final CustomUserDetailsService userDetailsService;
