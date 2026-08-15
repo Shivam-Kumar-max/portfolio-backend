@@ -31,7 +31,7 @@ public class SecurityConfig {
     private final CustomUserDetailsService userDetailsService;
     private final JwtAuthFilter jwtAuthFilter;
 
-    @Value("${FRONTEND_URL:http://localhost:5173}")
+    @Value("${FRONTEND_URL:https://portfolio-frontend-910k.onrender.com}")
     private String frontendUrl;
 
     @Bean
