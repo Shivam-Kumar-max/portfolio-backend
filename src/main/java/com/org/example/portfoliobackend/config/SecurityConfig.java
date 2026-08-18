@@ -31,7 +31,8 @@ public class SecurityConfig {
     private final CustomUserDetailsService userDetailsService;
     private final JwtAuthFilter jwtAuthFilter;
 
-    @Value("${FRONTEND_URL:https://portfolio-frontend-910k.onrender.com}")
+
+    @Value("${FRONTEND_URL:https://portfolio-frontend-9lok.onrender.com}")
     private String frontendUrl;
 
     @Bean
@@ -136,7 +137,12 @@ public class SecurityConfig {
         CorsConfiguration configuration = new CorsConfiguration();
 
         configuration.setAllowedOriginPatterns(
-                List.of(frontendUrl)
+                List.of(
+                        frontendUrl,
+                        "https://portfolio-frontend-*.onrender.com",
+                        "http://localhost:3000",
+                        "http://localhost:5173"
+                )
         );
 
         configuration.setAllowedMethods(
