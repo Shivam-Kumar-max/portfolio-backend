@@ -29,5 +29,7 @@ public class Project {
 
     private String liveUrl;
 
+    @Lob
+    @Column(columnDefinition = "LONGTEXT")
     private String imageUrl;
 }
